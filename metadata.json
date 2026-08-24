@@ -1,0 +1,6 @@
+{
+  "name": "Sonu Medical Hall",
+  "description": "Trusted Pharmacy & Medical Store in Bodhgaya, Gaya offering genuine medicines, healthcare devices, baby care, and WhatsApp prescription orders with fast delivery.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

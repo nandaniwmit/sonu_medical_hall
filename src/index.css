@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-heading: 'Sora', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+    --bg-base: #0A0B0D;
+    --bg-surface: #111216;
+    --bg-elevated: #18191E;
+    --border-color: #2D2E32;
+    --border-light: #232429;
+    --color-primary: #10B981;
+    --color-accent-blue: #3B82F6;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: var(--bg-base);
+    color: #E0E0E0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    letter-spacing: -0.02em;
+  }
+
+  .font-heading {
+    font-family: var(--font-heading) !important;
+  }
+
+  .font-sans, p, span, a, input, select, textarea, button, label {
+    font-family: var(--font-body);
+  }
+
+  code, pre, .font-mono {
+    font-family: var(--font-mono) !important;
+  }
+}
+
+/* High Density Grid and Matrix styling */
+.tech-dot-grid {
+  background-image: radial-gradient(#2D2E32 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+.tech-grid-border {
+  border-color: #2D2E32;
+}
+
+.high-density-panel {
+  background-color: #111216;
+  border: 1px solid #2D2E32;
+}
+
+.high-density-card {
+  background-color: #16171D;
+  border: 1px solid #2D2E32;
+}
+
+/* Custom scrollbar matching High Density theme */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0A0B0D;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2D2E32;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3B82F6;
+}
+
+/* Telemetry scanline and status animation */
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
